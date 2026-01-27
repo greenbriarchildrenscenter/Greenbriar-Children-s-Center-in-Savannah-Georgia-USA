@@ -1,89 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Greenbriar Children’s Center</title>
-
 <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-}
-header {
-  background: #2f7d32;
-  color: white;
-  padding: 30px;
-  text-align: center;
-}
-section {
-  padding: 30px;
-}
-footer {
-  background: #1b5e20;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-button {
-  background: #2f7d32;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-}
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-}
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; line-height:1.6; }
+header { background:#2f7d32; color:white; padding:30px 20px; text-align:center; }
+nav { background:#1b5e20; padding:12px; text-align:center; }
+nav a { color:white; margin:0 12px; text-decoration:none; font-weight:bold; }
+section { padding:40px 20px; max-width:900px; margin:auto; background:white; margin-top:20px; border-radius:8px; }
+h2 { color:#2f7d32; }
+footer { background:#1b5e20; color:white; text-align:center; padding:20px; margin-top:30px; }
+button { background:#2f7d32; color:white; padding:12px 25px; border:none; border-radius:6px; font-size:16px; cursor:pointer; }
+button:hover { background:#145214; }
+form input, form textarea { width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; font-size:15px; }
+img { width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:15px; }
+.whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50%; font-size:20px; text-decoration:none; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.3); }
+.thank-you { display:none; text-align:center; color:#2f7d32; font-weight:bold; font-size:18px; }
 </style>
+<script>
+function showThankYou(event){
+  event.preventDefault();
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('thankYouMessage').style.display='block';
+  // Send the form manually if needed (Formspree handles it automatically)
+  event.target.submit();
+}
+</script>
 </head>
-
-<body>
-
-<header>
+<body><header>
   <h1>Greenbriar Children’s Center</h1>
-  <p>Providing love, care, and support for children in Savannah, Georgia</p>
-</header>
-
-<section>
+  <p>Providing love, care, and hope for children in Savannah, Georgia</p>
+</header><nav>
+  <a href="#about">About</a>
+  <a href="#team">Team</a>
+  <a href="#programs">Programs</a>
+  <a href="#support">Support</a>
+  <a href="#contact">Contact</a>
+</nav><section id="about">
   <h2>About Us</h2>
-  <p>
-    Greenbriar Children’s Center is dedicated to providing a safe, loving,
-    and nurturing environment for children in need. Our mission is to
-    support children through education, care, and community-based programs.
-  </p>
-</section>
-
-<section>
+  <p>Greenbriar Children’s Center is a compassionate child-focused organization committed to nurturing children in a safe, supportive, and loving environment. We work closely with families and the Savannah community to ensure every child has the opportunity to grow, learn, and thrive.</p>
+</section><section id="team">
+  <h2>Our Team</h2>
+  <ul>
+    <li>Program Director</li>
+    <li>Outreach Manager</li>
+    <li>Child Welfare Officers</li>
+    <li>Female Caregivers & House Mothers</li>
+    <li>Education & Support Staff</li>
+  </ul>
+</section><section id="programs">
   <h2>Our Programs</h2>
   <ul>
     <li>Early Childhood Education</li>
+    <li>Safe Residential Care</li>
     <li>Family Support Services</li>
     <li>Community Outreach</li>
-    <li>Emergency Care for Children</li>
   </ul>
-</section>
-
-<section>
+  <img src="https://greenbriarchildrenscenter.org/wp-content/uploads/2021/09/programs.jpg" alt="Programs">
+</section><section id="support">
+  <h2>Support Our Mission</h2>
+  <p>The responsibility of caring for children is great, and the weight can be heavy at times. We are deeply grateful for how far we have come, and we thank God for strength and provision. With your support—no matter how small—we can continue to provide food, shelter, education, and hope to children in need.</p>
+  <p>Your kindness will never go unnoticed. We believe that God will richly bless every hand that gives in love.</p>
+  <a href="https://greenbriarchildrenscenter.org/donate" target="_blank"><button>Donate & Support</button></a>
+</section><section id="photos">
+  <h2>Gallery</h2>
+  <img src="https://greenbriarchildrenscenter.org/wp-content/uploads/2021/09/children-header.jpg" alt="Happy Children">
+  <img src="https://greenbriarchildrenscenter.org/wp-content/uploads/2021/09/classroom.jpg" alt="Classroom Activities">
+</section><section id="contact">
   <h2>Contact Us</h2>
-
-  <form action="https://formspree.io/f/xnjpyqqw" method="POST">
+  <p>Please leave us a message. We would love to hear from you.</p>  <div id="thankYouMessage" class="thank-you">Thank you! Your message has been sent successfully.</div>  <form id="contactForm" action="https://formspree.io/f/xnjpyqqw" method="POST" onsubmit="showThankYou(event)">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
-
-</section>
+</section><a href="https://wa.me/YOURNUMBER" class="whatsapp-btn" target="_blank">💬</a>
 
 <footer>
   <p>📍 Savannah, Georgia, USA</p>
-  <p>&copy; 2026 Greenbriar Children’s Center</p>
-</footer>
-
-</body>
-</html>
+  <p>💚 Prayers and love from the children and staff</p>
+  <p>&copy; 2026 Greenbriar Children’s Center. All Rights Reserved.</p>
+</footer></body>
+  </html>
