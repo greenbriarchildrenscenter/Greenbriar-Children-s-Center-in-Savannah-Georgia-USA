@@ -2,86 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Greenbriar Children’s Center</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenbriar Children's Center</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
+      background: #f9f9f9;
+      color: #333;
     }
+
     header {
-      background: #2e7d32;
+      background: #2f7d32;
       color: white;
       padding: 20px;
       text-align: center;
     }
-    section {
-      padding: 20px;
-      background: white;
-      margin: 15px;
-      border-radius: 8px;
+
+    header h1 {
+      margin: 0;
     }
-    h2 {
-      color: #2e7d32;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #3f9a42;
     }
-    img {
-      width: 100%;
-      max-width: 350px;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-    button {
-      background: #2e7d32;
+
+    nav a {
       color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-size: 16px;
+      padding: 14px 20px;
+      text-decoration: none;
     }
-    input, textarea {
+
+    nav a:hover {
+      background: #2f7d32;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2f7d32;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #2f7d32;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
       width: 100%;
-      padding: 10px;
+      border-radius: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
       margin: 8px 0;
       border-radius: 5px;
       border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    form button {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #3f9a42;
+      color: white;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Greenbriar Children’s Center</h1>
-  <p>Providing love, care, and education to children in need</p>
+  <h1>Greenbriar Children's Center</h1>
+  <p>Providing safe, nurturing, and educational spaces for children</p>
 </header>
 
-<section>
-  <p>
-    The responsibility of caring for children is great, and the weight can be heavy at times.
-    We are deeply grateful for how far we have come, and we thank God for strength and provision.
-    With your support—no matter how small—we can continue to provide food, shelter, education,
-    and hope to children in need.
-  </p>
-  <button>Donate & Support</button>
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#programs">Programs</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Greenbriar Children’s Center is dedicated to creating a safe, nurturing space where children can learn, grow, and feel truly cared for. Our mission is to help children thrive through education, care, and outreach programs.</p>
 </section>
 
-<section>
+<section id="programs">
+  <h2>Programs</h2>
+  <ul>
+    <li>Early childhood education</li>
+    <li>Outdoor activities and play</li>
+    <li>After-school enrichment</li>
+    <li>Community outreach and support</li>
+  </ul>
+</section>
+
+<section id="gallery">
   <h2>Gallery</h2>
-  <img src="109257-GCC-Stacked-Logo.jpg" alt="Greenbriar logo">
-  <img src="54288-1072972-b265f18f_f.jpg" alt="Children playing">
-  <img src="file_0000000059d0720a9f5eeafbe8b4a157.png" alt="Classroom activities">
+  <div class="gallery">
+    <img src="file_0000000059d0720a9f5eeafbe8b4a157.png" alt="Kids reading books in a classroom">
+    <img src="A_triptych_of_photographs_features_ethnically_dive.png" alt="Children playing outdoors">
+    <img src="A_collage_of_four_photographs_promotes_the_Greenbr.png" alt="Staff interacting with kids and smiling children">
+    <img src="A_logo_for_the_Greenbriar_Children's_Center_featur.png" alt="Greenbriar logo">
+  </div>
 </section>
 
-<section>
+<section id="support">
+  <h2>Support Our Work</h2>
+  <p>Your support helps us provide food, shelter, education, and hope to children in need.</p>
+  <a class="btn" href="#">Donate & Support</a>
+</section>
+
+<section id="contact">
   <h2>Contact Us</h2>
+  <p>Please leave us a message. We would love to hear from you.</p>
+
   <form action="https://formspree.io/f/xnjpyqqw" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
+
+  <!-- WhatsApp Contact Button -->
+  <a class="btn" href="https://wa.me/17179475884" target="_blank">Chat with us on WhatsApp</a>
 </section>
 
+<footer>
+  <p>© 2026 Greenbriar Children’s Center. All Rights Reserved.</p>
+</footer>
+
 </body>
-</html>
+                        </html>
